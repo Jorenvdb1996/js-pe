@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+  <title>Registeren</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <form action="#" id="registratieformulier" method="POST">
+        <h1>Registeren</h1>
+        <p>Meld je aan bij mijn website</p>
+        <!-- row 1 col 1/2 -->
+        <div class="row">
+
+          <div class="col">
+            <div class="row">
+              <div class="col-md-6">
+                <label>Voornaam</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="far fa-star"></i></span>
+                  </div>
+                  <input id="voornaam" type="text" name="name" class="form-control" placeholder="Voornaam">
+                </div>
+              </div>
+              <!-- row 1 col 2/2-->
+              <div class="col-md-6">
+                <label>Achternaam</label>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-signature"></i></span>
+                  </div>
+                  <input id="achternaam" type="text" name="achternaam" class="form-control" placeholder="Achternaam">
+                </div>
+              </div>
+            </div>
+
+            <!-- row 2 col 1/2 -->
+
+            <div class="row">
+              <div class="col-md-6">
+                <label>Gebruikersnaam</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="far fa-user"></i></span>
+                  </div>
+                  <input id="gebruikersnaam" type="text" name="Gebruikersnaam" class="form-control"
+                    placeholder="Gebruikersnaam">
+                </div>
+              </div>
+              <!-- row 2 col 2/2 -->
+              <div class="col-md-6">
+                <label>E-mailadres</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="far fa-envelope"></i></span>
+                  </div>
+                  <input id="email" type="text" name="email" class="form-control" placeholder="E-mailadres">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- row 3 col 1/2 -->
+              <div class="col-md-6">
+                <label>Wachtwoord</label>
+
+                <div class="input-group mb-3">
+
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                  </div>
+                  <input id="wachtwoord" type="password" name="wachtwoord" class="form-control">
+                  <div class="input-group-append">
+                    <span class="input-group-text" onclick="password_show_hide();">
+                      <i class="fas fa-eye" id="show_eye"></i>
+                      <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
+                    </span>
+                  </div>
+                </div>
+                <small class="form-text text-muted">Je wachtwoord moet minstens 8 tekens lang zijn.</small>
+              </div>
+              <!-- row 3 col 2/2 -->
+              <div class="col-md-6">
+                <label>Herhaal wachtwoord</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                  </div>
+                  <input id="wachtwoordherhaling" type="password" name="wachtwoordherhaling" class="form-control">
+                  <div class="input-group-append">
+                    <span class="input-group-text" onclick="password_show_hidesecond();">
+                      <i class="fas fa-eye" id="show_eyesecond"></i>
+                      <i class="fas fa-eye-slash d-none" id="hide_eyesecond"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- row 4 col 1/1 -->
+
+            <div class="row">
+              <div class="col-md-12">
+                <label>Adres</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-igloo"></i></span>
+                  </div>
+                  <input id="adres" type="text" name="adres" class="form-control" placeholder="Uw adres en huisnummer">
+                </div>
+              </div>
+            </div>
+
+
+            <!-- row 5 col 1/3 -->
+            <div class="row">
+              <div class="col-md-4">
+                <label>Land</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-globe-europe"></i></span>
+                  </div>
+                  <select class="form-control" id="land">
+                    <option value="" disabled selected hidden>Kies een land</option>
+                    <option>Belgium</option>
+                    <option>Netherlands</option>
+                    <option>Germany</option>
+                    <option>Luxembourg</option>
+                    <option>France</option>
+                  </select>
+                </div>
+              </div>
+              <!-- row 1 col 2/3-->
+              <div class="col-md-4">
+                <label>Provincie</label>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-map-marked"></i></span>
+                  </div>
+                  <select class="form-control" id="provincie">
+                    <option value="" disabled selected hidden>Kies een provincie</option>
+                    <option>Antwerpen</option>
+                    <option>Henegouwen</option>
+                    <option>Limburg</option>
+                    <option>Luxenburg</option>
+                    <option>Namen</option>
+                    <option>Oost-Vlaanderen</option>
+                  </select>
+                </div>
+              </div>
+              <!-- row 5 col 3/3-->
+
+              <div class="col-md-4">
+                <label>Postcode</label>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-mail-bulk"></i></span>
+                  </div>
+                  <input id="postcode" type="text" name="email" class="form-control" placeholder="Postcode">
+                </div>
+              </div>
+            </div>
+            <hr>
+
+            <!-- row 6 col 1/2 -->
+            <div class="row">
+              <div class="col-md-8">
+                <h3>Houd me op de hoogte</h3>
+
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input id="nieuwsbrief" type="checkbox" class="form-check-input" value="">Inschrijven voor onze
+                    nieuwsbrief
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input id="algemenevoorwaarden" type="checkbox" class="form-check-input" value="">Ik ga akkoord met
+                    de algemene voorwaarden
+                  </label>
+                </div>
+
+              </div>
+
+              <!-- row 6 col 2/2-->
+              <div class="col-md-4">
+                <h3>Betalingen</h3>
+
+                <input type="radio" class="form-check-input" id="betalingen" name="optbetaling" value="" disabled hidden
+                  checked>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" id="bankingapp" name="optbetaling" value="Banking app">
+                  <label class="form-check-label" for="betalingen"><i class="fas fa-mobile-alt "></i> Banking app</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" id="Overschrijving" name="optbetaling"
+                    value="Overschrijving">
+                  <label class="form-check-label" for="betalingen"><i class="fas fa-piggy-bank"></i>
+                    Overschrijving</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" id="Visacard" name="optbetaling" value="Visa card">
+                    <label class="form-check-label" for="betalingen"><i class="fab fa-cc-visa"></i> Visa card</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" id="Paypal" name="optbetaling" value="Paypal">
+                  <label class="form-check-label" for="betalingen"><i class="fab fa-paypal"></i> Paypal</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" id="Bitcoin" name="optbetaling" value="Bitcoin">
+                  <label class="form-check-label" for="betalingen"><i class="fab fa-bitcoin"></i> Bitcoin</label>
+                </div>
+              </div>
+            </div>
+
+            <hr>
+            <div class="row">
+              <div class=" col-md-12">
+                <button class="btn btn-primary btn-lg btn-block" type="button" id="btnzenden" onclick="validateForm()">
+                  Shoot </button>
+              </div>
+
+            </div>
+
+
+          </div>
+          <div class="d.none" id="meldingblok">
+            <div id="fouten"></div>
+            <div id="gelukt"></div>
+            <div id="betalingswijze"></div>
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/78def1a7b0.js" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+  <script src="js/formControlDOC.js"></script>
+
+
+
+
+</body>
+
+</html>
